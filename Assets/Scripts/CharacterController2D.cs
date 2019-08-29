@@ -25,8 +25,6 @@ public class CharacterController2D : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(Directory.GetCurrentDirectory());
-        
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
 

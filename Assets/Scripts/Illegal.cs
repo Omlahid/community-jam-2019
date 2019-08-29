@@ -12,7 +12,7 @@ public class Illegal : MonoBehaviour
             Input.GetKey(KeyCode.D) ||
             Input.GetKey(KeyCode.Space))
         {
-            CrashGame.Crash("WASD is to move the character");
+            CrashGame.Crash("File 'Player.controls' is missing or corrupted");
         }
     }
 }
