@@ -1,0 +1,13 @@
+READ THANKYOU.TXT BEFORE
+
+=======================================
+
+Game made with Unity by:
+Alexandre Moreau (https://github.com/Omlahid)
+Peter McCormick (https://github.com/Malpp)
+
+Made for the August 2019 Community Game Jam (https://itch.io/jam/cgj)
+
+For the code of the game, check out https://github.com/Omlahid/community-jam-2019
+
+Hope you enjoyed it ~~
