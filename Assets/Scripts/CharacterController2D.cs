@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,12 +17,18 @@ public class CharacterController2D : MonoBehaviour
     private new Rigidbody2D _rigidbody2D;
     private bool _facingRight = true; // For determining which way the player is currently facing.
     private Vector3 _velocity = Vector3.zero;
+    private Animator _animator;
 
     [Header("Events")] [Space] public UnityEvent onLandEvent;
+    private static readonly int Speed = Animator.StringToHash("speed");
+    private static readonly int Grounded = Animator.StringToHash("grounded");
 
     private void Awake()
     {
+        Debug.Log(Directory.GetCurrentDirectory());
+        
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
 
         if (onLandEvent == null)
             onLandEvent = new UnityEvent();
@@ -40,6 +47,8 @@ public class CharacterController2D : MonoBehaviour
             if (!wasGrounded)
                 onLandEvent.Invoke();
         }
+
+        _animator.SetBool(Grounded, _grounded);
     }
 
 
@@ -50,6 +59,8 @@ public class CharacterController2D : MonoBehaviour
             Vector3 targetVelocity = new Vector2(move * runForce, _rigidbody2D.velocity.y);
             _rigidbody2D.velocity =
                 Vector3.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity, movementSmoothing);
+
+            _animator.SetFloat(Speed, Mathf.Abs(_rigidbody2D.velocity.x));
 
             if (move > 0 && !_facingRight)
             {

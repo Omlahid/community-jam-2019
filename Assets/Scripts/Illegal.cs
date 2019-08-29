@@ -12,7 +12,7 @@ public class Illegal : MonoBehaviour
             Input.GetKey(KeyCode.D) ||
             Input.GetKey(KeyCode.Space))
         {
-            CrashGame.Crash("Error moving character!");
+            CrashGame.Crash("WASD is to move the character");
         }
     }
 }
