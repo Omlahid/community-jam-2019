@@ -8210,7 +8210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad242279a05741b2855398e0202286b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 800
+  jumpForce: 650
   runForce: 400
   movementSmoothing: 0.05
   airControl: 1
