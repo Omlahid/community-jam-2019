@@ -303,15 +303,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7266827943797190809, guid: feae8bcc84f1c494c9db8299377deb49,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266827943797190809, guid: feae8bcc84f1c494c9db8299377deb49,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 447250407}
+    - target: {fileID: 7266827943797190809, guid: feae8bcc84f1c494c9db8299377deb49,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DeleteGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266827943797190809, guid: feae8bcc84f1c494c9db8299377deb49,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7266827942643495030, guid: feae8bcc84f1c494c9db8299377deb49,
         type: 3}
       propertyPath: m_Text
       value: SuperCarlJr.exe has stopped working because it does not exist.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266827943797190809, guid: feae8bcc84f1c494c9db8299377deb49,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7266827941982301304, guid: feae8bcc84f1c494c9db8299377deb49, type: 3}
@@ -323,6 +338,49 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 305420743}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &447250405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447250406}
+  - component: {fileID: 447250407}
+  m_Layer: 0
+  m_Name: Delete
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &447250406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447250405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447250407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447250405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565de328c3f53e447aab6763bf638e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &932602306
 GameObject:
   m_ObjectHideFlags: 0

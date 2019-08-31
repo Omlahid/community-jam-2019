@@ -56,9 +56,10 @@ public class CharacterController2D : MonoBehaviour
     {
         if (_grounded || airControl)
         {
-            Vector3 targetVelocity = new Vector2(move * runForce, _rigidbody2D.velocity.y);
+            var velocity = _rigidbody2D.velocity;
+            Vector3 targetVelocity = new Vector2(move * runForce, velocity.y);
             _rigidbody2D.velocity =
-                Vector3.SmoothDamp(_rigidbody2D.velocity, targetVelocity, ref _velocity, movementSmoothing);
+                Vector3.SmoothDamp(velocity, targetVelocity, ref _velocity, movementSmoothing);
 
             _animator.SetFloat(Speed, Mathf.Abs(_rigidbody2D.velocity.x));
 
@@ -85,8 +86,9 @@ public class CharacterController2D : MonoBehaviour
     {
         _facingRight = !_facingRight;
 
-        Vector3 theScale = transform.localScale;
+        var transform1 = transform;
+        Vector3 theScale = transform1.localScale;
         theScale.x *= -1;
-        transform.localScale = theScale;
+        transform1.localScale = theScale;
     }
 }
