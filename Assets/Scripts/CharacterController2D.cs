@@ -22,11 +22,13 @@ public class CharacterController2D : MonoBehaviour
     [Header("Events")] [Space] public UnityEvent onLandEvent;
     private static readonly int Speed = Animator.StringToHash("speed");
     private static readonly int Grounded = Animator.StringToHash("grounded");
+    private AudioSource _audioSource;
 
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
 
         if (onLandEvent == null)
             onLandEvent = new UnityEvent();
@@ -74,6 +76,7 @@ public class CharacterController2D : MonoBehaviour
         {
             _grounded = false;
             _rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+            _audioSource.Play();
         }
     }
 
