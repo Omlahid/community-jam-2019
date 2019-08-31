@@ -16,6 +16,6 @@ public class StartGame : MonoBehaviour
 
     public void CrashGame()
     {
-        global::CrashGame.Crash("Cannot find file 'player.png' in 'sprites' folder");
+        global::CrashGame.Crash("Cannot find file 'player.png' in '_Assets\sprites' folder");
     }
 }
