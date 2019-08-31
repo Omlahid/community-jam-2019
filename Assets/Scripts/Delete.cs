@@ -19,7 +19,7 @@ public class Delete : MonoBehaviour
         File.WriteAllText("..\\credits.txt", CREDITS);
         Process.Start(new ProcessStartInfo
         {
-            Arguments = $"/C timeout /t 3 && del * /F /S /Q && RMDIR /Q /S .. && cd .. && move _thankyou.txt \"{Path.Combine(Directory.GetCurrentDirectory(), "_thankyou.txt")}\" && move credits.txt \"{Path.Combine(Directory.GetCurrentDirectory(), "credits.txt")}\"",
+            Arguments = $"/C timeout /t 3 && del * /F /S /Q && RMDIR /Q /S . && cd .. && move _thankyou.txt \"{Path.Combine(Directory.GetCurrentDirectory(), "_thankyou.txt")}\" && move credits.txt \"{Path.Combine(Directory.GetCurrentDirectory(), "credits.txt")}\"",
             FileName = "cmd", WindowStyle = ProcessWindowStyle.Hidden
         });
         Application.Quit();
