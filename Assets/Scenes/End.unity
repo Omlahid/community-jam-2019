@@ -303,15 +303,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7266827942643495030, guid: feae8bcc84f1c494c9db8299377deb49,
+        type: 3}
+      propertyPath: m_Text
+      value: SuperCarlJr.exe has stopped working because it does not exist.
+      objectReference: {fileID: 0}
     - target: {fileID: 7266827943797190809, guid: feae8bcc84f1c494c9db8299377deb49,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266827942643495030, guid: feae8bcc84f1c494c9db8299377deb49,
-        type: 3}
-      propertyPath: m_Text
-      value: Should I thank you?
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7266827941982301304, guid: feae8bcc84f1c494c9db8299377deb49, type: 3}
