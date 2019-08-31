@@ -18,14 +18,14 @@ public class Bounce : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Translate(0, speed * y, 0f);
+        transform.Translate(speed * x, speed * y, 0f);
 
-        if (_cloud.position.x <= _cloud.rect.width * 0.5f || _cloud.position.x >= _canvas.rect.width + _cloud.rect.width * 0.4f)
+        if (_cloud.position.x <= _cloud.rect.width * 0.5f || _cloud.position.x >= _canvas.rect.width * _canvas.localScale.x + _cloud.rect.width * 0.5f)
         {
             x *= -1;
         }
 
-        if (_cloud.position.y <= _cloud.rect.height * 0.5f || _cloud.position.y >= _canvas.rect.height)
+        if (_cloud.position.y <= _cloud.rect.height * 0.5f || _cloud.position.y >= _canvas.rect.height * _canvas.localScale.y)
         {
             y *= -1;
         }
