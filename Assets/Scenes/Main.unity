@@ -8035,10 +8035,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messages:
-  - So close to finding the secret
-  - Try that again
-  - I think you're onto something
-  - So close
+  - What do you think you're doing?
+  - Please stop messing around
+  - Try harder next time
+  - This will lead you nowhere
 --- !u!1 &909440895
 GameObject:
   m_ObjectHideFlags: 0
